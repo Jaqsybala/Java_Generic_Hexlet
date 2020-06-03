@@ -7,32 +7,31 @@ public class Main2 {
 
     public int findIndex(final List list, Object target) {
 
-        int count = 0;
+        int index = 0;
 
-        for (Object i: list) {
+        for (Object i : list) {
 
-            if (i == null) {
-                count++;
+            if (i == target) {
+                return index;
             }
 
-            if (i.equals(target)) {
-                return count;
-            }
+            index++;
 
-            return count;
         }
 
         return -1;
     }
+
     // До Java 5.0 List был не обобщенным
     public static void main(String[] args) {
         Main2 main2 = new Main2();
         List<Integer> list = new ArrayList<>();
-        list.add(null);
         list.add(2);
         list.add(1);
+        list.add(null);
         list.add(3);
-        int res = main2.findIndex(list, 1);
+        list.add(4);
+        int res = main2.findIndex(list, 4);
         System.out.println(res);
 
 //        show(list);
