@@ -18,7 +18,7 @@ public class Main {
             }
         };
 
-        Human human = collectionHelper.findFirst(mans, "Ar",Sex.M);
+        Human human = collectionHelper.findFirst(mans, "Az",Sex.M);
         System.out.println(human.toString());
     }
 }
